@@ -9,11 +9,21 @@ int main()
 {
 	srand(time(0));
 
-	int arr[SIZE];
+	int arr[SIZE], max;
 	for (int i = 0; i < SIZE; i++)
 	{
 		arr[i] = rand() % 100;
 		cout << arr[i] << " ";
 	}
 	cout << endl;
+	
+	max = arr[0];
+	for (int i = 1; i < SIZE; i++)
+	{
+		if(max < arr[i])
+		{
+			max = arr[i];
+		}
+	}
+	cout<<"max = " << max << endl;
 }
