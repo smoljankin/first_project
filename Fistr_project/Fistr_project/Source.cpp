@@ -9,7 +9,7 @@ int main()
 {
 	srand(time(0));
 
-	int arr[SIZE], max;
+	int arr[SIZE], max, min;
 	for (int i = 0; i < SIZE; i++)
 	{
 		arr[i] = rand() % 100;
@@ -26,4 +26,14 @@ int main()
 		}
 	}
 	cout<<"max = " << max << endl;
+
+	min = arr[0];
+	for (int i = 1; i < SIZE; i++)
+	{
+		if(min > arr[i])
+		{
+			min = arr[i];
+		}
+	}
+	cout<<"min = " << min << endl;
 }
